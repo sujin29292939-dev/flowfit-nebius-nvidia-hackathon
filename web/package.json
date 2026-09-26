@@ -1,0 +1,42 @@
+{
+    "name":  "flowfit-ops-ui",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "set NEXT_DIST_DIR=.next-dev\u0026\u0026 next dev",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "lint":  "tsc --noEmit",
+                    "deploy:check:mac":  "bash deploy/check-ui-server.sh",
+                    "deploy:init-env:mac":  "bash deploy/init-ui-env.sh",
+                    "deploy:pack":  "powershell -ExecutionPolicy Bypass -File deploy/pack-ui.ps1",
+                    "deploy:pack:desktop":  "powershell -ExecutionPolicy Bypass -File deploy/pack-ui.ps1 -OutputDir \"$env:USERPROFILE\\Desktop\""
+                },
+    "dependencies":  {
+                         "@types/react-syntax-highlighter":  "^15.5.13",
+                         "better-sqlite3":  "^12.9.0",
+                         "class-variance-authority":  "^0.7.1",
+                         "clsx":  "^2.1.1",
+                         "katex":  "^0.16.45",
+                         "lucide-react":  "^0.469.0",
+                         "next":  "^14.2.0",
+                         "node-cron":  "^4.2.1",
+                         "react":  "^18.2.0",
+                         "react-dom":  "^18.2.0",
+                         "react-markdown":  "^10.1.0",
+                         "react-syntax-highlighter":  "^16.1.1",
+                         "rehype-katex":  "^7.0.1",
+                         "remark-gfm":  "^4.0.1",
+                         "remark-math":  "^6.0.0",
+                         "tailwind-merge":  "^2.5.5"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^22.10.2",
+                            "@types/react":  "^18.3.12",
+                            "@types/react-dom":  "^18.3.1",
+                            "autoprefixer":  "^10.4.20",
+                            "postcss":  "^8.4.49",
+                            "tailwindcss":  "^3.4.17",
+                            "typescript":  "^5.7.2"
+                        }
+}

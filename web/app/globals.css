@@ -1,0 +1,154 @@
+@import "katex/dist/katex.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 206 40% 98%;
+  --foreground: 215 28% 17%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 17%;
+  --primary: 213 71% 23%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 32% 96%;
+  --secondary-foreground: 215 28% 17%;
+  --accent: 205 52% 92%;
+  --accent-foreground: 213 71% 23%;
+  --muted: 210 28% 95%;
+  --muted-foreground: 215 16% 45%;
+  --border: 214 28% 88%;
+  --input: 214 28% 88%;
+  --ring: 213 71% 23%;
+  --success: 142 52% 40%;
+  --success-foreground: 138 76% 96%;
+  --warning: 41 93% 48%;
+  --warning-foreground: 44 92% 95%;
+  --danger: 0 72% 47%;
+  --danger-foreground: 0 86% 97%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-background text-foreground antialiased;
+  font-family: "IBM Plex Sans", "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+  background-image:
+    radial-gradient(circle at top left, rgba(14, 116, 144, 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.06), transparent 25%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 252, 0.98));
+}
+
+code,
+pre,
+.font-mono {
+  font-family: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply tracking-tight text-slate-950;
+  }
+
+  p {
+    @apply text-slate-600;
+  }
+}
+
+@layer components {
+  .surface-grid {
+    background-image: theme("backgroundImage.grid");
+    background-size: 28px 28px;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/60 bg-white/85 shadow-panel backdrop-blur;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-950;
+  }
+
+  .sidebar-link-active {
+    @apply bg-slate-950 text-white hover:bg-slate-900 hover:text-white;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-medium text-slate-800;
+  }
+
+  .muted-caption {
+    @apply text-xs font-medium uppercase tracking-[0.18em] text-slate-400;
+  }
+
+  .flowfit-markdown {
+    @apply space-y-3 text-sm leading-7 text-slate-800;
+  }
+
+  .flowfit-markdown p {
+    @apply text-slate-800;
+  }
+
+  .flowfit-markdown ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+
+  .flowfit-markdown ol {
+    @apply list-decimal space-y-1 pl-5;
+  }
+
+  .flowfit-markdown blockquote {
+    @apply border-l-4 border-slate-200 pl-4 text-slate-600;
+  }
+
+  .flowfit-markdown h1 {
+    @apply text-2xl font-semibold;
+  }
+
+  .flowfit-markdown h2 {
+    @apply text-xl font-semibold;
+  }
+
+  .flowfit-markdown h3 {
+    @apply text-lg font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .flowfit-streaming-cursor::after {
+    display: inline-block;
+    width: 0.58em;
+    height: 1em;
+    margin-left: 0.16em;
+    vertical-align: -0.12em;
+    background: currentColor;
+    animation: flowfit-cursor-blink 1s steps(2, start) infinite;
+    content: "";
+  }
+}
+
+@keyframes flowfit-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "flowfit-runner",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "deploy:check": "powershell -ExecutionPolicy Bypass -File deploy/check-server.ps1",
+    "deploy:check:mac": "bash deploy/check-server.sh",
+    "deploy:init-env:mac": "bash deploy/init-production-env.sh",
+    "deploy:pack": "powershell -ExecutionPolicy Bypass -File deploy/pack-runner.ps1",
+    "deploy:pack:desktop": "powershell -ExecutionPolicy Bypass -File deploy/pack-runner.ps1 -OutputDir \"$env:USERPROFILE\\Desktop\"",
+    "test:capabilities": "npm run build && node dist/connectors/capabilityClassification.test.js",
+    "test:idempotency": "npm run build && node --env-file=.env dist/connectors/idempotency.test.js",
+    "test:connector-failures": "npm run build && node dist/connectors/failureClassification.test.js",
+    "test:offline-demotion": "npm run build && node dist/connectors/offlinePolicy.test.js && node dist/tools/genericAgentOfflinePolicy.test.js",
+    "test:generic-agent-offline": "npm run build && node dist/tools/genericAgentOfflinePolicy.test.js",
+    "test:approval-resume": "npm run build && node dist/tools/genericAgentResume.test.js",
+    "test:generic-agent-schema": "npm run build && node dist/tools/genericAgentSchemaDrift.test.js",
+    "test:device-operation-mode": "npm run build && node dist/devices/operationMode.test.js",
+    "test:authority": "npm run build && node dist/executionAuthority/operationPolicy.test.js",
+    "test:understanding": "npm run build && node dist/understanding/dateStandardizer.test.js",
+    "test:decision": "npm run build && node dist/decision/engine.test.js",
+    "test:core": "npm run test:understanding && npm run test:decision",
+    "test:understanding:eval": "npm run eval:understanding:heuristic -- --min-intent 0.45 --min-slot 0.23 --max-unsafe 0.56",
+    "test:understanding:eval:target": "npm run eval:understanding:heuristic -- --min-intent 0.7 --min-slot 0.45 --max-unsafe 0",
+    "eval:understanding": "tsx --env-file=.env test/understanding-eval/run.ts",
+    "eval:understanding:heuristic": "tsx test/understanding-eval/run.ts --mode heuristic"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "@neondatabase/serverless": "^0.10.0",
+    "@types/mailparser": "^3.4.6",
+    "dockerode": "^4.0.0",
+    "imapflow": "^1.3.3",
+    "mailparser": "^3.9.8",
+    "playwright": "^1.59.1",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^3.3.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

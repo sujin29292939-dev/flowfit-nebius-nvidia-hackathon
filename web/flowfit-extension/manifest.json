@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "FlowFit Agent Gate Bridge",
+  "version": "2.0.0",
+  "description": "FlowFit Gate 승인 큐에서 허용된 브라우저 작업만 실행합니다.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "debugger",
+    "webNavigation",
+    "cookies",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "https://flowfit.app/*",
+        "https://*.flowfit.app/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/device-executor.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "FlowFit Gate Bridge"
+  }
+}

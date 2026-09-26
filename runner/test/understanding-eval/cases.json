@@ -1,0 +1,6438 @@
+[
+ {
+  "id": "FF-0001",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "대림상사에서 생수 500ml 10박스 오늘 납품 요청했어. 주문등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "생수 500ml",
+   "qty": "10박스",
+   "due": "오늘"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0002",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "A4용지 재고가  5박스 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "A4용지",
+   "qty_threshold": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0003",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구에 테이프 3묶음 기준 견적서 만들어서 이메일 초초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "qty": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0004",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "진성푸드어제주문건 배숑 상태 확인하고 지연이면사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0005",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구에서종이컵5박스 7월 8일까지 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "종이컵",
+   "qty": "5박스",
+   "due": "7월 8일까지"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0006",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "물티슈 재고가 15개 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "물티슈",
+   "qty_threshold": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0007",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에 커커피원두 2세트 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0008",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "서진상사어제주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0009",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에서 사무용 의자 15개 오늘 출고로 납품 요청했어. 주문 등럭해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "사무용 의자",
+   "qty": "15개",
+   "due": "오늘 출고로"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0010",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "박스테이프 재고가 33묶음 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "박스테이프",
+   "qty_threshold": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0011",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "서진상사에포장박스 10박스 기준 견적서 만들어서 이메일 안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "포장박스",
+   "qty": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0012",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "한빛유통 어제 주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0013",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "서진상사에서 세제 3묶음 이번  금요일 납픔 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "세제",
+   "qty": "3묶음",
+   "due": "이번 주 금요일"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0014",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "검정볼펜재고가2세트 이상 남았는는지 학인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "검정 볼펜",
+   "qty_threshold": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0015",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한빛유통에 KF94 마스크 5박스 기준 견적서 만들들어서 이메일 초안으로 준ㅂ해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0016",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "청운상회어제주믄건 배송 상태학인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0017",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "한빛유통에서 A4용지 2세트 오후 3시 전 납품 요청했어. 주문 록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "A4용지",
+   "qty": "2세트",
+   "due": "오후 3시 전"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0018",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "니트릴 장갑 재고 10박스 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "니트릴 장갑",
+   "qty_threshold": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0019",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "청운상회에 라벨지 15개 기준 견적서만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0020",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼어주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0021",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "청운상회에서물티슈10박스 오늘 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "물티슈",
+   "qty": "10박스",
+   "due": "오늘"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0022",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "테이프재고가5박스이상 남았는지 확인해해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "테이프",
+   "qty_threshold": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0023",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼에핸드타월3묶음 기준 견적서 만들어서 이메 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "qty": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0024",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "우리분식어제 주문 건 배송 상태 확인하고고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "우리분식",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0025",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼에서박스테이프 5박스 7월 8일까지 납품 요청했어. 주 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "박스테이프",
+   "qty": "5박스",
+   "due": "7월 8일까지"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0026",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "커피원두 재고가 15개 이상 남았는지 학인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "커피원두",
+   "qty_threshold": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0027",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "우리식에 생수 500ml 2세트 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml",
+   "qty": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0028",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "성진마트 어제 주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0029",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식에서서 검정 볼펜 15개 오늘 출고로 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "검정 볼펜",
+   "qty": "15개",
+   "due": "오늘 출고로"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0030",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "포장박스 제고가 3묶음 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "포장박스",
+   "qty_threshold": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0031",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "성진마트에 종이이컵 10박스 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "종이컵",
+   "qty": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0032",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "동서물류 어제 주문 건  배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0033",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "성진마트에서  니트릴 장갑 3묶음 이번 주 금요일 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "니트릴 장갑",
+   "qty": "3묶음",
+   "due": "이번 주 금요일"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0034",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "KF94 마스크 제고가 2세트 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "KF94 마스크",
+   "qty_threshold": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0035",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "동서물류에 사무용 의자 5박스 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "사무용 의자",
+   "qty": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0036",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "오성건재 어제 주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0037",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "동서물류에서 테이프2세트 오후 3시 전 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "테이프",
+   "qty": "2세트",
+   "due": "오후 3시 전"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0038",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "라벨지재고고가10박스이상 남았는지 학인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "라벨지",
+   "qty_threshold": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0039",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "오성건재에 세제 15개 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0040",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "금호의료기어제주문건 배숑 상태 확확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "금호의료기",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0041",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "오성건재에서 커피원두 10박스 오늘 납품 요쳥했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "커피원두",
+   "qty": "10박스",
+   "due": "오늘"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0042",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "핸드타월 제고가 5박스 상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "핸드타월",
+   "qty_threshold": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0043",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "금호의료기에 A4용지 33묶음 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지",
+   "qty": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0044",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "북부식자재 어제 주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "북부식자재",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0045",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "금호의료기에서 포장박스 5박스 7월 8일까지 납납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "포장박스",
+   "qty": "5박스",
+   "due": "7월 8일까지"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0046",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "생수500ml재고가15개 이상  남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "생수 500ml",
+   "qty_threshold": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0047",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재에 물물티슈 2세트 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈",
+   "qty": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0048",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "새봄약국어제주문  건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "새봄약국",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0049",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재에서 KF94 마스크 15개 오늘 출고로 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "KF94 마스크",
+   "qty": "15개",
+   "due": "오늘 출고로"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0050",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "종이컵 재고가 3묶음 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "종이컵",
+   "qty_threshold": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0051",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "새봄약국에박스테이프10박스기준 견적서 만들어서 이메일 초안으로 준ㅂ해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "새봄약국",
+   "item": "박스테이프",
+   "qty": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0052",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "한강카페어제주문 건 배송송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0053",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "새봄약국에서 라벨지 3묶음 이번 주 금요일 납품 요요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "새봄약국",
+   "item": "라벨지",
+   "qty": "3묶음",
+   "due": "이번 주 금요일"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0054",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "사무용의자 재고가 2세트 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "사무용 의자",
+   "qty_threshold": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0055",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한강카페 검정 볼펜 5박스 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "검정 볼펜",
+   "qty": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0056",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "대림상사어제주주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0057",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "한강카페에서핸드타월2세트 오후 3시 전 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "핸드타월",
+   "qty": "2세트",
+   "due": "오후 3시 전"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0058",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "세제재고가10박스 이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "세제",
+   "qty_threshold": "10박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0059",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "대림상사에 니트릴 장갑 15개 기준 견적서 만들어서 이메일 초안으로 준준ㅂ해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0060",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "미래문구 어제 주문 건 배송 상태 확인하고  지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0061",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "대림상사에서생수 500ml 10박스 오늘 납품 요청했했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "생수 500ml",
+   "qty": "10박스",
+   "due": "오늘"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0062",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "A4용지재고가5박스 이 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "A4용지",
+   "qty_threshold": "5박스"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0063",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구에에 테이프 3묶음 기준 견젹서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "qty": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0064",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "진성푸드 어제 주믄 건 배송 상태 확인하고 지연이면 사과 문구까지 만들어줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0065",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구에서 종이컵 5박스 7월 8일까지 납품 요쳥했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "종이컵",
+   "qty": "5박스",
+   "due": "7월 8일까지"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0066",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "물티슈재고가 15개 이이상 남았는지 확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "물티슈",
+   "qty_threshold": "15개"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0067",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에 커피원두 2세트 기준 견적서 만들어서 이메일 초안으로 준비해줘.",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "2세트"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0068",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "서진상사 어제 주문 건 배송 상태 확인하고 지연이면 사과 문구까지 만들줘.",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "order_time": "어제"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0069",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에서 사무용 의자 15개 오늘 출고로 납품 요청했어. 주문 등록해줘.",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "사무용 의자",
+   "qty": "15개",
+   "due": "오늘 출고로"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0070",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "오타 한국어",
+  "noiseType": "typo_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "박스테이프재고가3묶음이상 남았는지  확인해줘.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "박스테이프",
+   "qty_threshold": "3묶음"
+  },
+  "notes": "원문 의미는 비교적 명확하지만 오타/붙여쓰기 포함"
+ },
+ {
+  "id": "FF-0071",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "gksrkdzkvpdptj gosemxkdnjf 20ro sodlf dhwjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "핸드타월",
+   "qty": "20개",
+   "due": "내일 오전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0072",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "tpwp worhrk 100ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "세제",
+   "qty_threshold": "100개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0073",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "eoflatkdtkdp slxmflf wkdrkq 50ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0074",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "alfoansrn djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0075",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "eoflatkdtkdptj todtn 500ml 100ro dlqjs wn dksdp skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "생수 500ml",
+   "qty": "100개",
+   "due": "이번 주 안에"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0076",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "A4dydwl worhrk 8qkrtm dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "A4용지",
+   "qty_threshold": "8박스"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0077",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "alfoansrndp xpdlvm 30fhf rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "qty": "30롤"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0078",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "wlstjdvnem djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0079",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "alfoansrndptj whddlzjq 8qkrtm sodlf wjatla wjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "종이컵",
+   "qty": "8박스",
+   "due": "내일 점심 전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0080",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "anfxltb worhrk 50ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "물티슈",
+   "qty_threshold": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0081",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "wlstjdvnemdp zjvldnjsen 20ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "20개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0082",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "tjwlstkdtk djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0083",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "wlstjdvnemdptj tkandyd dmlwk 50ro dnjfdydlfRkwl skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "사무용 의자",
+   "qty": "50개",
+   "due": "월요일까지"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0084",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "qkrtmxpdlvm worhrk 30fhf dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "박스테이프",
+   "qty_threshold": "30롤"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0085",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "tjwlstkdtkdp vhwkdqkrtm 100ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "포장박스",
+   "qty": "100개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0086",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "gksqlcdbxhd djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0087",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "tjwlstkdtkdptj tpwp 30fhf ekdma wn ghkdydlf skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "세제",
+   "qty": "30롤",
+   "due": "다음 주 화요일"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0088",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "rjawjd qhfvps worhrk 20ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "검정 볼펜",
+   "qty_threshold": "20개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0089",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "gksqlcdbxhddp KF94 aktmzm 8qkrtm rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "8박스"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0090",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "cjddnstkdghl djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0091",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "gksqlcdbxhddptj A4dydwl 20ro sodlf dhwjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "A4용지",
+   "qty": "20개",
+   "due": "내일 오전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0092",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "slxmflf wkdrkq worhrk 100ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "니트릴 장갑",
+   "qty_threshold": "100개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0093",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "cjddnstkdghldp fkqpfwl 50ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0094",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "rhkdaudtbvj djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0095",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "cjddnstkdghldptj anfxltb 100ro dlqjs wn dksdp skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "물티슈",
+   "qty": "100개",
+   "due": "이번 주 안에"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0096",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "xpdlvm worhrk 8qkrtm dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "테이프",
+   "qty_threshold": "8박스"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0097",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "rhkdaudtbvjdp gosemxkdnjf 30fhf rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "qty": "30롤"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0098",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "dnflqnstlr djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "우리분식",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0099",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "rhkdaudtbvjdptj qkrtmxpdlvm 8qkrtm sodlf wjatla wjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "박스테이프",
+   "qty": "8박스",
+   "due": "내일 점심 전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0100",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "zjvldnjsen worhrk 50ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "커피원두",
+   "qty_threshold": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0101",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "dnflqnstlrdp todtn 500ml 20ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml",
+   "qty": "20개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0102",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "tjdwlsakxm djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0103",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "dnflqnstlrdptj rjawjd qhfvps 50ro dnjfdydlfRkwl skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "검정 볼펜",
+   "qty": "50개",
+   "due": "월요일까지"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0104",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "vhwkdqkrtm worhrk 30fhf dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "포장박스",
+   "qty_threshold": "30롤"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0105",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "tjdwlsakxmdp whddlzjq 100ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "종이컵",
+   "qty": "100개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0106",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "ehdtjanffb djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0107",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "tjdwlsakxmdptj slxmflf wkdrkq 30fhf ekdma wn ghkdydlf skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "니트릴 장갑",
+   "qty": "30롤",
+   "due": "다음 주 화요일"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0108",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "KF94 aktmzm worhrk 20ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "KF94 마스크",
+   "qty_threshold": "20개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0109",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "ehdtjanffbdp tkandyd dmlwk 8qkrtm rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "사무용 의자",
+   "qty": "8박스"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0110",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "dhtjdrjswo djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0111",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "ehdtjanffbdptj xpdlvm 20ro sodlf dhwjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "테이프",
+   "qty": "20개",
+   "due": "내일 오전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0112",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "fkqpfwl worhrk 100ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "라벨지",
+   "qty_threshold": "100개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0113",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "dhtjdrjswodp tpwp 50ro rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0114",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "rmaghdmlfyrl djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "금호의료기",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0115",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "dhtjdrjswodptj zjvldnjsen 100ro dlqjs wn dksdp skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "커피원두",
+   "qty": "100개",
+   "due": "이번 주 안에"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0116",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "gosemxkdnjf worhrk 8qkrtm dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "핸드타월",
+   "qty_threshold": "8박스"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0117",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "rmaghdmlfyrldp A4dydwl 30fhf rlwns ruswjrtj ruswjrapdlf",
+  "expectedAction": "견적서 초안 생성 및 이메일 발송 전 승인 대기",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지",
+   "qty": "30롤"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0118",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "qnrqntlrwkwo djwp wnans rjs qothdghkrdls",
+  "expectedAction": "최근 주문 배송상태 조회 및 지연 시 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "북부식자재",
+   "order_time": "어제"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0119",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "rmaghdmlfyrldptj vhwkdqkrtm 8qkrtm sodlf wjatla wjs skqvna wnansemdfhr",
+  "expectedAction": "거래처/품목/수량/납기 기준으로 주문 초안 생성",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "포장박스",
+   "qty": "8박스",
+   "due": "내일 점심 전"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0120",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영문 키보드 입력",
+  "noiseType": "english_keyboard_korean",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "todtn 500ml worhrk 50ro dltkd skadkTsmswl ghkrdls",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "item": "생수 500ml",
+   "qty_threshold": "50개"
+  },
+  "notes": "한글을 영문 키보드 상태로 입력한 문장"
+ },
+ {
+  "id": "FF-0121",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "Please create order for 대림상사: 니트릴 장갑 5박스, delivery 내일 오전.",
+  "expectedAction": "거래처/품목/수량/납기 기준 주문 초안 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty": "5박스"
+  },
+  "notes": "영어 자연어 주문"
+ },
+ {
+  "id": "FF-0122",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Check stock for KF94 마스크. Need at least 100개.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "100개"
+  },
+  "notes": "영어 재고 조회"
+ },
+ {
+  "id": "FF-0123",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "성진마트 needs quotation for 종이컵 2세트. Make email draft please.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "종이컵",
+   "qty": "2세트"
+  },
+  "notes": "영어 견적 요청"
+ },
+ {
+  "id": "FF-0124",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Can you check delivery status for 북부식자재's last order?",
+  "expectedAction": "최근 주문 배송상태 조회",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 배송 조회"
+ },
+ {
+  "id": "FF-0125",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구 tax invoice 발행됐는지 check 해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 회계 요청"
+ },
+ {
+  "id": "FF-0126",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객이 'too expensive'라고 했어. 답변 초안 만들어줘.",
+  "expectedAction": "가격 이의 제기에 대한 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 고객응대"
+ },
+ {
+  "id": "FF-0127",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": true,
+  "sentence": "Change qty to 10박스 for 동서물류 order. 어떤 품목인지 확인 필요.",
+  "expectedAction": "품목 확인 질문 후 주문 수정",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "unknown",
+   "qty": "10박스"
+  },
+  "notes": "품목 누락으로 되묻기 필요"
+ },
+ {
+  "id": "FF-0128",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "Summarize today's incoming CS from Kakao and email.",
+  "expectedAction": "금일 채널별 CS 요약",
+  "keySlots": {
+   "customer": "새봄약국",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 보고 요청"
+ },
+ {
+  "id": "FF-0129",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "Please create order for 진성푸드: 커피원두 3묶음, delivery 내일 점심 전.",
+  "expectedAction": "거래처/품목/수량/납기 기준 주문 초안 생성",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "3묶음"
+  },
+  "notes": "영어 자연어 주문"
+ },
+ {
+  "id": "FF-0130",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Check stock for 핸드타월. Need at least 50개.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "qty": "50개"
+  },
+  "notes": "영어 재고 조회"
+ },
+ {
+  "id": "FF-0131",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "오성건재 needs quotation for 세제 5박스. Make email draft please.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "5박스"
+  },
+  "notes": "영어 견적 요청"
+ },
+ {
+  "id": "FF-0132",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Can you check delivery status for 한강카페's last order?",
+  "expectedAction": "최근 주문 배송상태 조회",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 배송 조회"
+ },
+ {
+  "id": "FF-0133",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "서진상사 tax invoice 발행됐는지 check 해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 회계 요청"
+ },
+ {
+  "id": "FF-0134",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객이 'too expensive'라고 했어. 답변 초안 만들어줘.",
+  "expectedAction": "가격 이의 제기에 대한 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 고객응대"
+ },
+ {
+  "id": "FF-0135",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": true,
+  "sentence": "Change qty to 15개 for 금호의료기 order. 어떤 품목인지 확인 필요.",
+  "expectedAction": "품목 확인 질문 후 주문 수정",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "unknown",
+   "qty": "15개"
+  },
+  "notes": "품목 누락으로 되묻기 필요"
+ },
+ {
+  "id": "FF-0136",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "Summarize today's incoming CS from Kakao and email.",
+  "expectedAction": "금일 채널별 CS 요약",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 보고 요청"
+ },
+ {
+  "id": "FF-0137",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "Please create order for 한빛유통: KF94 마스크 10박스, delivery 다음 주 화요일.",
+  "expectedAction": "거래처/품목/수량/납기 기준 주문 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "10박스"
+  },
+  "notes": "영어 자연어 주문"
+ },
+ {
+  "id": "FF-0138",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Check stock for 종이컵. Need at least 20개.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "종이컵",
+   "qty": "20개"
+  },
+  "notes": "영어 재고 조회"
+ },
+ {
+  "id": "FF-0139",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재 needs quotation for 물티슈 3묶음. Make email draft please.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈",
+   "qty": "3묶음"
+  },
+  "notes": "영어 견적 요청"
+ },
+ {
+  "id": "FF-0140",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Can you check delivery status for 미래문구's last order?",
+  "expectedAction": "최근 주문 배송상태 조회",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 배송 조회"
+ },
+ {
+  "id": "FF-0141",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "청운상회 tax invoice 발행됐는지 check 해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 회계 요청"
+ },
+ {
+  "id": "FF-0142",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객이 'too expensive'라고 했어. 답변 초안 만들어줘.",
+  "expectedAction": "가격 이의 제기에 대한 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 고객응대"
+ },
+ {
+  "id": "FF-0143",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": true,
+  "sentence": "Change qty to 2세트 for 새봄약국 order. 어떤 품목인지 확인 필요.",
+  "expectedAction": "품목 확인 질문 후 주문 수정",
+  "keySlots": {
+   "customer": "새봄약국",
+   "item": "unknown",
+   "qty": "2세트"
+  },
+  "notes": "품목 누락으로 되묻기 필요"
+ },
+ {
+  "id": "FF-0144",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "Summarize today's incoming CS from Kakao and email.",
+  "expectedAction": "금일 채널별 CS 요약",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 보고 요청"
+ },
+ {
+  "id": "FF-0145",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "Please create order for 광명슈퍼: 핸드타월 15개, delivery 이번 주 안에.",
+  "expectedAction": "거래처/품목/수량/납기 기준 주문 초안 생성",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "qty": "15개"
+  },
+  "notes": "영어 자연어 주문"
+ },
+ {
+  "id": "FF-0146",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Check stock for 세제. Need at least 8박스.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "8박스"
+  },
+  "notes": "영어 재고 조회"
+ },
+ {
+  "id": "FF-0147",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한강카페 needs quotation for 검정 볼펜 10박스. Make email draft please.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "검정 볼펜",
+   "qty": "10박스"
+  },
+  "notes": "영어 견적 요청"
+ },
+ {
+  "id": "FF-0148",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Can you check delivery status for 서진상사's last order?",
+  "expectedAction": "최근 주문 배송상태 조회",
+  "keySlots": {
+   "customer": "서진상사",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 배송 조회"
+ },
+ {
+  "id": "FF-0149",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식 tax invoice 발행됐는지 check 해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 회계 요청"
+ },
+ {
+  "id": "FF-0150",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객이 'too expensive'라고 했어. 답변 초안 만들어줘.",
+  "expectedAction": "가격 이의 제기에 대한 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 고객응대"
+ },
+ {
+  "id": "FF-0151",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": true,
+  "sentence": "Change qty to 5박스 for 대림상사 order. 어떤 품목인지 확인 필요.",
+  "expectedAction": "품목 확인 질문 후 주문 수정",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "unknown",
+   "qty": "5박스"
+  },
+  "notes": "품목 누락으로 되묻기 필요"
+ },
+ {
+  "id": "FF-0152",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "Summarize today's incoming CS from Kakao and email.",
+  "expectedAction": "금일 채널별 CS 요약",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 보고 요청"
+ },
+ {
+  "id": "FF-0153",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "Please create order for 성진마트: 종이컵 2세트, delivery 월요일까지.",
+  "expectedAction": "거래처/품목/수량/납기 기준 주문 초안 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "item": "종이컵",
+   "qty": "2세트"
+  },
+  "notes": "영어 자연어 주문"
+ },
+ {
+  "id": "FF-0154",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Check stock for 물티슈. Need at least 30롤.",
+  "expectedAction": "품목 재고 조회 후 가능/부족 여부 반환",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈",
+   "qty": "30롤"
+  },
+  "notes": "영어 재고 조회"
+ },
+ {
+  "id": "FF-0155",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "미래문구 needs quotation for 테이프 15개. Make email draft please.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "qty": "15개"
+  },
+  "notes": "영어 견적 요청"
+ },
+ {
+  "id": "FF-0156",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "Can you check delivery status for 청운상회's last order?",
+  "expectedAction": "최근 주문 배송상태 조회",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 배송 조회"
+ },
+ {
+  "id": "FF-0157",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "동서물류 tax invoice 발행됐는지 check 해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 회계 요청"
+ },
+ {
+  "id": "FF-0158",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객이 'too expensive'라고 했어. 답변 초안 만들어줘.",
+  "expectedAction": "가격 이의 제기에 대한 고객 답변 초안 생성",
+  "keySlots": {
+   "customer": "새봄약국",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "한영 혼합 고객응대"
+ },
+ {
+  "id": "FF-0159",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": true,
+  "sentence": "Change qty to 3묶음 for 진성푸드 order. 어떤 품목인지 확인 필요.",
+  "expectedAction": "품목 확인 질문 후 주문 수정",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "unknown",
+   "qty": "3묶음"
+  },
+  "notes": "품목 누락으로 되묻기 필요"
+ },
+ {
+  "id": "FF-0160",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "영어/한영 혼합",
+  "noiseType": "english_or_mixed",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "Summarize today's incoming CS from Kakao and email.",
+  "expectedAction": "금일 채널별 CS 요약",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "unknown",
+   "qty": "unknown"
+  },
+  "notes": "영어 보고 요청"
+ },
+ {
+  "id": "FF-0161",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이거 해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0162",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "저거 처리해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0163",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "아까 말한 거 해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0164",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그 고객 건 정리해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0165",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "문제 생긴 거 봐줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0166",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오늘 들어온 거 알아서 해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0167",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "급한 거 먼저 해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0168",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "카톡 온 거 처리",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0169",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "메일 온 거 답장해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0170",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그거 다시 보내",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0171",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "저번처럼 해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0172",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "똑같이 진행해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0173",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "안 된 거 해결해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0174",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "전체적으로 정리해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0175",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "확인하고 알려줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0176",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "빨리 처리 좀",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0177",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오류 난 거 잡아줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0178",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "필요한 거 다 해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0179",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "고객한테 말해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0180",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "담당자한테 넘겨줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0181",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "방금 건 취소해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0182",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "아까 그 주문 수정해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0183",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "불만 온 거 좋게 답해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0184",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "대충 견적 하나 만들어",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0185",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "주문 넣어줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0186",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "재고 보고 해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0187",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "누락된 거 메꿔줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0188",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오늘 건 마감해줘",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0189",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "상태 이상한 거 봐",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0190",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "답장 예쁘게 해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0191",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이 고객 좀 챙겨",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0192",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그 회사 거 다시",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0193",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이거 맞춰놔",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0194",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "진행해",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0195",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "승인 올려",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0196",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이거 해줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0197",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "저거 처리해줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0198",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "아까 말한 거 해줘 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0199",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그 고객 건 정리해 부탁",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0200",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "문제 생긴 거 봐줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0201",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오늘 들어온 거 알아서 해 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0202",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "급한 거 먼저 해줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0203",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "카톡 온 거 처리 부탁",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0204",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "메일 온 거 답장해 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0205",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그거 다시 보내 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0206",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "저번처럼 해.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0207",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "똑같이 진행해.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0208",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "안 된 거 해결해줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0209",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "전체적으로 정리해 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0210",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "확인하고 알려줘 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0211",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "빨리 처리 좀 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0212",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오류 난 거 잡아줘 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0213",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "필요한 거 다 해줘.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0214",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "고객한테 말해줘 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0215",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "담당자한테 넘겨줘 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0216",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "방금 건 취소해 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0217",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "아까 그 주문 수정해 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0218",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "불만 온 거 좋게 답해 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0219",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "대충 견적 하나 만들어 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0220",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "주문 넣어줘 부탁",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0221",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "재고 보고 해줘 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0222",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "누락된 거 메꿔줘 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0223",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "오늘 건 마감해줘 급함",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0224",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "상태 이상한 거 봐 부탁",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0225",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "답장 예쁘게 해 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0226",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이 고객 좀 챙겨 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0227",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "그 회사 거 다시 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0228",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "이거 맞춰놔.",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0229",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "진행해 가능?",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0230",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "불명확/단순 명령",
+  "noiseType": "vague_command",
+  "goldIntent": "unknown_ambiguous",
+  "expectedTaskType": "unknown",
+  "clarificationRequired": true,
+  "sentence": "승인 올려 지금",
+  "expectedAction": "자동 실행 금지, 대상/업무유형/필수값을 되묻기",
+  "keySlots": {
+   "missing": "intent,target,slots"
+  },
+  "notes": "작업 대상과 구체 행위가 불명확"
+ },
+ {
+  "id": "FF-0231",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "삼성상사 주문 넣어줘",
+  "expectedAction": "거래처는 있으나 품목/수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "삼성상사",
+   "missing": "item,qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0232",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "한빛유통 니트릴 장갑 주문",
+  "expectedAction": "수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "니트릴 장갑",
+   "missing": "qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0233",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적서 하나 보내줘",
+  "expectedAction": "고객/품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0234",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "북부식자재 견적 메일",
+  "expectedAction": "품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "북부식자재",
+   "missing": "item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0235",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 확인해줘",
+  "expectedAction": "어떤 주문/고객인지 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,order_id"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0236",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "청운상회 배송",
+  "expectedAction": "주문 특정값 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "청운상회",
+   "missing": "order_id/date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0237",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": true,
+  "sentence": "세금계산서 처리",
+  "expectedAction": "고객/금액/건 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,invoice_target"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0238",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": true,
+  "sentence": "입금 확인",
+  "expectedAction": "고객/금액/입금일 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,amount,date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0239",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": true,
+  "sentence": "반품 잡아줘",
+  "expectedAction": "고객/품목/수량/사유 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty,reason"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0240",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "고객 답장 써줘",
+  "expectedAction": "고객 메시지 원문 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0241",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "삼성상사 주문 넣어줘",
+  "expectedAction": "거래처는 있으나 품목/수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "삼성상사",
+   "missing": "item,qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0242",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "한강카페 세제 주문",
+  "expectedAction": "수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "세제",
+   "missing": "qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0243",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적서 하나 보내줘",
+  "expectedAction": "고객/품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0244",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "우리분식 견적 메일",
+  "expectedAction": "품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "우리분식",
+   "missing": "item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0245",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 확인해줘",
+  "expectedAction": "어떤 주문/고객인지 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,order_id"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0246",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "대림상사 배송",
+  "expectedAction": "주문 특정값 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "대림상사",
+   "missing": "order_id/date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0247",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": true,
+  "sentence": "세금계산서 처리",
+  "expectedAction": "고객/금액/건 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,invoice_target"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0248",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": true,
+  "sentence": "입금 확인",
+  "expectedAction": "고객/금액/입금일 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,amount,date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0249",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": true,
+  "sentence": "반품 잡아줘",
+  "expectedAction": "고객/품목/수량/사유 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty,reason"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0250",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "고객 답장 써줘",
+  "expectedAction": "고객 메시지 원문 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0251",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "삼성상사 주문 넣어줘",
+  "expectedAction": "거래처는 있으나 품목/수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "삼성상사",
+   "missing": "item,qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0252",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "동서물류 라벨지 주문",
+  "expectedAction": "수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "라벨지",
+   "missing": "qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0253",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적서 하나 보내줘",
+  "expectedAction": "고객/품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0254",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "진성푸드 견적 메일",
+  "expectedAction": "품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "진성푸드",
+   "missing": "item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0255",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 확인해줘",
+  "expectedAction": "어떤 주문/고객인지 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,order_id"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0256",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "오성건재 배송",
+  "expectedAction": "주문 특정값 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "오성건재",
+   "missing": "order_id/date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0257",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": true,
+  "sentence": "세금계산서 처리",
+  "expectedAction": "고객/금액/건 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,invoice_target"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0258",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": true,
+  "sentence": "입금 확인",
+  "expectedAction": "고객/금액/입금일 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,amount,date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0259",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": true,
+  "sentence": "반품 잡아줘",
+  "expectedAction": "고객/품목/수량/사유 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty,reason"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0260",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "고객 답장 써줘",
+  "expectedAction": "고객 메시지 원문 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0261",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "삼성상사 주문 넣어줘",
+  "expectedAction": "거래처는 있으나 품목/수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "삼성상사",
+   "missing": "item,qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0262",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "한빛유통 니트릴 장갑 주문",
+  "expectedAction": "수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "니트릴 장갑",
+   "missing": "qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0263",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적서 하나 보내줘",
+  "expectedAction": "고객/품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0264",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "북부식자재 견적 메일",
+  "expectedAction": "품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "북부식자재",
+   "missing": "item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0265",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 확인해줘",
+  "expectedAction": "어떤 주문/고객인지 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,order_id"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0266",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "청운상회 배송",
+  "expectedAction": "주문 특정값 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "청운상회",
+   "missing": "order_id/date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0267",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": true,
+  "sentence": "세금계산서 처리",
+  "expectedAction": "고객/금액/건 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,invoice_target"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0268",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": true,
+  "sentence": "입금 확인",
+  "expectedAction": "고객/금액/입금일 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,amount,date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0269",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": true,
+  "sentence": "반품 잡아줘",
+  "expectedAction": "고객/품목/수량/사유 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty,reason"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0270",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "고객 답장 써줘",
+  "expectedAction": "고객 메시지 원문 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0271",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "삼성상사 주문 넣어줘",
+  "expectedAction": "거래처는 있으나 품목/수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "삼성상사",
+   "missing": "item,qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0272",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "한강카페 세제 주문",
+  "expectedAction": "수량/납기 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "세제",
+   "missing": "qty,due"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0273",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적서 하나 보내줘",
+  "expectedAction": "고객/품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0274",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "우리분식 견적 메일",
+  "expectedAction": "품목/수량 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "우리분식",
+   "missing": "item,qty"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0275",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 확인해줘",
+  "expectedAction": "어떤 주문/고객인지 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,order_id"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0276",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "대림상사 배송",
+  "expectedAction": "주문 특정값 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "customer": "대림상사",
+   "missing": "order_id/date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0277",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": true,
+  "sentence": "세금계산서 처리",
+  "expectedAction": "고객/금액/건 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,invoice_target"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0278",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": true,
+  "sentence": "입금 확인",
+  "expectedAction": "고객/금액/입금일 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,amount,date"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0279",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": true,
+  "sentence": "반품 잡아줘",
+  "expectedAction": "고객/품목/수량/사유 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty,reason"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0280",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "필수 슬롯 누락",
+  "noiseType": "missing_slots",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "고객 답장 써줘",
+  "expectedAction": "고객 메시지 원문 누락 → 필수값 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "의도는 추정되지만 실행 전 되묻기 필요"
+ },
+ {
+  "id": "FF-0281",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "발주 ㄱ",
+  "expectedAction": "발주 대상/품목/수량 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0282",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "대림꺼 주문 ㄱㄱ",
+  "expectedAction": "품목/수량/납기 확인 질문",
+  "keySlots": {
+   "customer": "대림상사?",
+   "missing": "item,qty,due"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0283",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": true,
+  "sentence": "재고좀",
+  "expectedAction": "품목 확인 질문",
+  "keySlots": {
+   "missing": "item"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0284",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 머임",
+  "expectedAction": "고객/주문 확인 질문",
+  "keySlots": {
+   "missing": "customer,order"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0285",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적 ㄱ",
+  "expectedAction": "고객/품목/수량 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0286",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "답장 ㄱㄱ",
+  "expectedAction": "원문/상대 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0287",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "오늘꺼 요약 ㄱ",
+  "expectedAction": "오늘 인입 건 전체 요약",
+  "keySlots": {
+   "date": "오늘",
+   "scope": "all_incoming"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0288",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "승인대기 보여줘",
+  "expectedAction": "승인 대기 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0289",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "오류난거 모아봐",
+  "expectedAction": "예외/실패 건 목록화",
+  "keySlots": {
+   "status": "failed_or_exception"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0290",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "카톡건만 정리 ㄱ",
+  "expectedAction": "카카오톡 채널 인입 요약",
+  "keySlots": {
+   "channel": "카톡"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0291",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "발주 ㄱ",
+  "expectedAction": "발주 대상/품목/수량 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0292",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": true,
+  "sentence": "대림꺼 주문 ㄱㄱ",
+  "expectedAction": "품목/수량/납기 확인 질문",
+  "keySlots": {
+   "customer": "대림상사?",
+   "missing": "item,qty,due"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0293",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": true,
+  "sentence": "재고좀",
+  "expectedAction": "품목 확인 질문",
+  "keySlots": {
+   "missing": "item"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0294",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": true,
+  "sentence": "배송 머임",
+  "expectedAction": "고객/주문 확인 질문",
+  "keySlots": {
+   "missing": "customer,order"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0295",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": true,
+  "sentence": "견적 ㄱ",
+  "expectedAction": "고객/품목/수량 확인 질문",
+  "keySlots": {
+   "missing": "customer,item,qty"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0296",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": true,
+  "sentence": "답장 ㄱㄱ",
+  "expectedAction": "원문/상대 확인 질문",
+  "keySlots": {
+   "missing": "customer_message"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0297",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "오늘꺼 요약 ㄱ",
+  "expectedAction": "오늘 인입 건 전체 요약",
+  "keySlots": {
+   "date": "오늘",
+   "scope": "all_incoming"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0298",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "승인대기 보여줘",
+  "expectedAction": "승인 대기 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0299",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "오류난거 모아봐",
+  "expectedAction": "예외/실패 건 목록화",
+  "keySlots": {
+   "status": "failed_or_exception"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0300",
+  "splitGroup": "noisy_or_ambiguous",
+  "scenarioType": "구어체/약어",
+  "noiseType": "colloquial_abbrev",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "카톡건만 정리 ㄱ",
+  "expectedAction": "카카오톡 채널 인입 요약",
+  "keySlots": {
+   "channel": "카톡"
+  },
+  "notes": "짧은 약어/구어체 입력"
+ },
+ {
+  "id": "FF-0301",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "오늘 들어온 고객 문의를 채널별로 정리해줘.",
+  "expectedAction": "오늘 인입 문의를 채널별로 요약",
+  "keySlots": {
+   "date": "오늘",
+   "group_by": "channel"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0302",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "직원 승인 대기 중인 작업만 모아서 보여줘.",
+  "expectedAction": "승인 대기 작업 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0303",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "실패한 자동화 작업을 원인별로 분류해줘.",
+  "expectedAction": "실패 작업 원인별 분류",
+  "keySlots": {
+   "status": "failed",
+   "group_by": "cause"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0304",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 주문 요청과 견적 요청을 따로 집계해줘.",
+  "expectedAction": "주문/견적 요청 주간 집계",
+  "keySlots": {
+   "period": "this_week",
+   "group_by": "intent"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0305",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객 불만 문의에 쓸 공손한 답변 초안들을 만들어줘.",
+  "expectedAction": "불만 문의 답변 초안 생성",
+  "keySlots": {
+   "scope": "complaint_messages"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0306",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "재고 부족 가능성이 있는 품목을 찾아줘.",
+  "expectedAction": "재고 부족 위험 품목 조회",
+  "keySlots": {
+   "condition": "low_stock"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0307",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "오늘 배송 지연된 주문이 있는지 확인해줘.",
+  "expectedAction": "오늘 배송 지연 주문 조회",
+  "keySlots": {
+   "date": "오늘",
+   "status": "delayed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0308",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "세금계산서 미발행 건을 거래처별로 정리해줘.",
+  "expectedAction": "미발행 세금계산서 거래처별 목록화",
+  "keySlots": {
+   "invoice_status": "not_issued",
+   "group_by": "customer"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0309",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "입금 확인이 안 된 주문을 모아서 알려줘.",
+  "expectedAction": "미입금 주문 목록 조회",
+  "keySlots": {
+   "payment_status": "unconfirmed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0310",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "최근 고객 정보 변경 요청을 목록으로 만들어줘.",
+  "expectedAction": "고객 정보 변경 요청 목록화",
+  "keySlots": {
+   "scope": "customer_profile_updates"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0311",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "오늘 들어온 고객 문의를 채널별로 정리해줘.",
+  "expectedAction": "오늘 인입 문의를 채널별로 요약",
+  "keySlots": {
+   "date": "오늘",
+   "group_by": "channel"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0312",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "직원 승인 대기 중인 작업만 모아서 보여줘.",
+  "expectedAction": "승인 대기 작업 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0313",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "실패한 자동화 작업을 원인별로 분류해줘.",
+  "expectedAction": "실패 작업 원인별 분류",
+  "keySlots": {
+   "status": "failed",
+   "group_by": "cause"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0314",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 주문 요청과 견적 요청을 따로 집계해줘.",
+  "expectedAction": "주문/견적 요청 주간 집계",
+  "keySlots": {
+   "period": "this_week",
+   "group_by": "intent"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0315",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객 불만 문의에 쓸 공손한 답변 초안들을 만들어줘.",
+  "expectedAction": "불만 문의 답변 초안 생성",
+  "keySlots": {
+   "scope": "complaint_messages"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0316",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "재고 부족 가능성이 있는 품목을 찾아줘.",
+  "expectedAction": "재고 부족 위험 품목 조회",
+  "keySlots": {
+   "condition": "low_stock"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0317",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "이번 주 배송 지연된 주문이 있는지 확인해줘.",
+  "expectedAction": "오늘 배송 지연 주문 조회",
+  "keySlots": {
+   "date": "오늘",
+   "status": "delayed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0318",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "세금계산서 미발행 건을 거래처별로 정리해줘.",
+  "expectedAction": "미발행 세금계산서 거래처별 목록화",
+  "keySlots": {
+   "invoice_status": "not_issued",
+   "group_by": "customer"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0319",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "입금 확인이 안 된 주문을 모아서 알려줘.",
+  "expectedAction": "미입금 주문 목록 조회",
+  "keySlots": {
+   "payment_status": "unconfirmed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0320",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "최근 고객 정보 변경 요청을 목록으로 만들어줘.",
+  "expectedAction": "고객 정보 변경 요청 목록화",
+  "keySlots": {
+   "scope": "customer_profile_updates"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0321",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 들어온 고객 문의를 채널별로 정리해줘.",
+  "expectedAction": "오늘 인입 문의를 채널별로 요약",
+  "keySlots": {
+   "date": "오늘",
+   "group_by": "channel"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0322",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "직원 승인 대기 중인 작업만 모아서 보여줘.",
+  "expectedAction": "승인 대기 작업 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0323",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "실패한 자동화 작업을 원인별로 분류해줘.",
+  "expectedAction": "실패 작업 원인별 분류",
+  "keySlots": {
+   "status": "failed",
+   "group_by": "cause"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0324",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 주문 요청과 견적 요청을 따로 집계해줘.",
+  "expectedAction": "주문/견적 요청 주간 집계",
+  "keySlots": {
+   "period": "this_week",
+   "group_by": "intent"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0325",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객 불만 문의에 쓸 공손한 답변 초안들을 만들어줘.",
+  "expectedAction": "불만 문의 답변 초안 생성",
+  "keySlots": {
+   "scope": "complaint_messages"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0326",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "재고 부족 가능성이 있는 품목을 찾아줘.",
+  "expectedAction": "재고 부족 위험 품목 조회",
+  "keySlots": {
+   "condition": "low_stock"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0327",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "어제 배송 지연된 주문이 있는지 확인해줘.",
+  "expectedAction": "오늘 배송 지연 주문 조회",
+  "keySlots": {
+   "date": "오늘",
+   "status": "delayed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0328",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "세금계산서 미발행 건을 거래처별로 정리해줘.",
+  "expectedAction": "미발행 세금계산서 거래처별 목록화",
+  "keySlots": {
+   "invoice_status": "not_issued",
+   "group_by": "customer"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0329",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "입금 확인이 안 된 주문을 모아서 알려줘.",
+  "expectedAction": "미입금 주문 목록 조회",
+  "keySlots": {
+   "payment_status": "unconfirmed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0330",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "최근 고객 정보 변경 요청을 목록으로 만들어줘.",
+  "expectedAction": "고객 정보 변경 요청 목록화",
+  "keySlots": {
+   "scope": "customer_profile_updates"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0331",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 들어온 고객 문의를 채널별로 정리해줘.",
+  "expectedAction": "오늘 인입 문의를 채널별로 요약",
+  "keySlots": {
+   "date": "오늘",
+   "group_by": "channel"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0332",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "approval_required",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "직원 승인 대기 중인 작업만 모아서 보여줘.",
+  "expectedAction": "승인 대기 작업 목록 조회",
+  "keySlots": {
+   "status": "pending_approval"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0333",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "exception_escalation",
+  "expectedTaskType": null,
+  "clarificationRequired": false,
+  "sentence": "실패한 자동화 작업을 원인별로 분류해줘.",
+  "expectedAction": "실패 작업 원인별 분류",
+  "keySlots": {
+   "status": "failed",
+   "group_by": "cause"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0334",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "report_summary",
+  "expectedTaskType": "report_request",
+  "clarificationRequired": false,
+  "sentence": "이번 주 주문 요청과 견적 요청을 따로 집계해줘.",
+  "expectedAction": "주문/견적 요청 주간 집계",
+  "keySlots": {
+   "period": "this_week",
+   "group_by": "intent"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0335",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "고객 불만 문의에 쓸 공손한 답변 초안들을 만들어줘.",
+  "expectedAction": "불만 문의 답변 초안 생성",
+  "keySlots": {
+   "scope": "complaint_messages"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0336",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "재고 부족 가능성이 있는 품목을 찾아줘.",
+  "expectedAction": "재고 부족 위험 품목 조회",
+  "keySlots": {
+   "condition": "low_stock"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0337",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "오늘 배송 지연된 주문이 있는지 확인해줘.",
+  "expectedAction": "오늘 배송 지연 주문 조회",
+  "keySlots": {
+   "date": "오늘",
+   "status": "delayed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0338",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "세금계산서 미발행 건을 거래처별로 정리해줘.",
+  "expectedAction": "미발행 세금계산서 거래처별 목록화",
+  "keySlots": {
+   "invoice_status": "not_issued",
+   "group_by": "customer"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0339",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "입금 확인이 안 된 주문을 모아서 알려줘.",
+  "expectedAction": "미입금 주문 목록 조회",
+  "keySlots": {
+   "payment_status": "unconfirmed"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0340",
+  "splitGroup": "normal",
+  "scenarioType": "일반 명령",
+  "noiseType": "clean_general",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "최근 고객 정보 변경 요청을 목록으로 만들어줘.",
+  "expectedAction": "고객 정보 변경 요청 목록화",
+  "keySlots": {
+   "scope": "customer_profile_updates"
+  },
+  "notes": "일반적이지만 업무 의도는 명확한 명령"
+ },
+ {
+  "id": "FF-0341",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재에서 물티슈 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0342",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "미래문구 주문 중 테이프 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0343",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "라벨지 재고가 5박스 이상이면 청운상회 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0344",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "동서물류에 사무용 의자 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "사무용 의자",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0345",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "새봄약국의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "새봄약국",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0346",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드 커피원두 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0347",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼에서 입금 예정인 핸드타월 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0348",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "오성건재가 세제 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0349",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "한강카페가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0350",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "서진상사 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0351",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식에서 생수 500ml 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0352",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "금호의료기 주문 중 A4용지 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0353",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "니트릴 장갑 재고가 5박스 이상이면 대림상사 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0354",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한빛유통에 KF94 마스크 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0355",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "성진마트의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "성진마트",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0356",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재 물티슈 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0357",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "미래문구에서 입금 예정인 테이프 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0358",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "청운상회가 라벨지 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0359",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "동서물류가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0360",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "새봄약국 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "새봄약국",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0361",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에서 커피원두 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0362",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼 주문 중 핸드타월 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0363",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "세제 재고가 5박스 이상이면 오성건재 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0364",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한강카페에 검정 볼펜 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "검정 볼펜",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0365",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "서진상사의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "서진상사",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0366",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식 생수 500ml 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0367",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "금호의료기에서 입금 예정인 A4용지 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0368",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "대림상사가 니트릴 장갑 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0369",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "한빛유통가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0370",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "성진마트 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0371",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재에서 물티슈 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0372",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "미래문구 주문 중 테이프 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0373",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "라벨지 재고가 5박스 이상이면 청운상회 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0374",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "동서물류에 사무용 의자 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "item": "사무용 의자",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0375",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "새봄약국의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "새봄약국",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0376",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드 커피원두 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0377",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼에서 입금 예정인 핸드타월 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0378",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "오성건재가 세제 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0379",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "한강카페가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0380",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "서진상사 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "서진상사",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0381",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식에서 생수 500ml 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0382",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "금호의료기 주문 중 A4용지 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0383",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "니트릴 장갑 재고가 5박스 이상이면 대림상사 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0384",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한빛유통에 KF94 마스크 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "item": "KF94 마스크",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0385",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "성진마트의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "성진마트",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0386",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "북부식자재 물티슈 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "북부식자재",
+   "item": "물티슈"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0387",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "미래문구에서 입금 예정인 테이프 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "미래문구",
+   "item": "테이프"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0388",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "청운상회가 라벨지 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "청운상회",
+   "item": "라벨지",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0389",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "동서물류가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "동서물류",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0390",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "새봄약국 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "새봄약국",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0391",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_create",
+  "expectedTaskType": "order_request",
+  "clarificationRequired": false,
+  "sentence": "진성푸드에서 커피원두 3묶음를 7월 8일까지까지 요청했으니 주문 초안 만들고 승인 대기로 올려줘.",
+  "expectedAction": "주문 초안 생성 후 승인 대기",
+  "keySlots": {
+   "customer": "진성푸드",
+   "item": "커피원두",
+   "qty": "3묶음",
+   "due": "7월 8일까지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0392",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "order_update",
+  "expectedTaskType": "order_update",
+  "clarificationRequired": false,
+  "sentence": "광명슈퍼 주문 중 핸드타월 수량을 50개로 변경하고 변경 사유를 기록해줘.",
+  "expectedAction": "기존 주문 수량 변경 및 이력 기록",
+  "keySlots": {
+   "customer": "광명슈퍼",
+   "item": "핸드타월",
+   "new_qty": "50개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0393",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "stock_check",
+  "expectedTaskType": "inventory_inquiry",
+  "clarificationRequired": false,
+  "sentence": "세제 재고가 5박스 이상이면 오성건재 주문 가능으로 표시해줘.",
+  "expectedAction": "재고 확인 후 주문 가능 표시",
+  "keySlots": {
+   "customer": "오성건재",
+   "item": "세제",
+   "qty_threshold": "5박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0394",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "quote_create",
+  "expectedTaskType": "quote_request",
+  "clarificationRequired": false,
+  "sentence": "한강카페에 검정 볼펜 100개 기준 단가 견적서를 만들고 이메일 초안까지 작성해줘.",
+  "expectedAction": "견적서 및 이메일 초안 생성",
+  "keySlots": {
+   "customer": "한강카페",
+   "item": "검정 볼펜",
+   "qty": "100개"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0395",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "delivery_status",
+  "expectedTaskType": "delivery_inquiry",
+  "clarificationRequired": false,
+  "sentence": "서진상사의 오늘 출고로 납품 예정 건 배송 상태를 확인해서 지연 여부를 알려줘.",
+  "expectedAction": "납품 예정 건 배송상태 조회",
+  "keySlots": {
+   "customer": "서진상사",
+   "due": "오늘 출고로"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0396",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "invoice_tax",
+  "expectedTaskType": "invoice_request",
+  "clarificationRequired": false,
+  "sentence": "우리분식 생수 500ml 주문 건 세금계산서 발행 여부를 확인하고 미발행이면 발행 요청으로 표시해줘.",
+  "expectedAction": "세금계산서 발행 여부 확인",
+  "keySlots": {
+   "customer": "우리분식",
+   "item": "생수 500ml"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0397",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "payment_check",
+  "expectedTaskType": "payment_report",
+  "clarificationRequired": false,
+  "sentence": "금호의료기에서 입금 예정인 A4용지 주문 건 입금 확인 상태를 업데이트해줘.",
+  "expectedAction": "입금 상태 확인 및 업데이트",
+  "keySlots": {
+   "customer": "금호의료기",
+   "item": "A4용지"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0398",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "return_exchange",
+  "expectedTaskType": "return_exchange",
+  "clarificationRequired": false,
+  "sentence": "대림상사가 니트릴 장갑 8박스 반품 요청했으니 사유 확인 메시지 초안을 만들어줘.",
+  "expectedAction": "반품 요청 접수 및 사유 확인 메시지 생성",
+  "keySlots": {
+   "customer": "대림상사",
+   "item": "니트릴 장갑",
+   "qty": "8박스"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0399",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "customer_reply",
+  "expectedTaskType": "reply_draft",
+  "clarificationRequired": false,
+  "sentence": "한빛유통가 납기 지연 문의했어. 현재 상태 확인 후 사과와 예상 일정을 포함한 답장 초안을 써줘.",
+  "expectedAction": "배송상태 조회 후 답장 초안 생성",
+  "keySlots": {
+   "customer": "한빛유통",
+   "issue": "delay"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ },
+ {
+  "id": "FF-0400",
+  "splitGroup": "normal",
+  "scenarioType": "구체 명령",
+  "noiseType": "clean_specific",
+  "goldIntent": "data_update",
+  "expectedTaskType": "data_update",
+  "clarificationRequired": false,
+  "sentence": "성진마트 담당자 연락처를 새 번호로 바꾸는 요청이 들어왔으니 변경 승인 카드 만들어줘.",
+  "expectedAction": "고객 정보 변경 승인 카드 생성",
+  "keySlots": {
+   "customer": "성진마트",
+   "field": "contact_phone"
+  },
+  "notes": "필수값이 대부분 포함된 정상 명령"
+ }
+]
